@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to KoKoa Talk</title>
+    <title>Welcome to KoKoa Clone</title>
 </head>
 <body>
     <!-- 긴 클래스 이름을 사용하는 이유는 나중에 헷갈리기 때문에 알아보기쉽게하기위해서이다 -->
-    <div id="status-bar">
+    <div class="status-bar">
         <div class="status-bar__column"> 
             <span>No Service</span>
             <i class="fas fa-wifi"></i>
@@ -18,12 +19,24 @@
         </div>
         <div class="status-bar__column">
             <span>110%</span>
-            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-battery-full fa-lg"></i>
             <!-- Battery Icon  -->
             <i class="fas fa-bolt"></i>
             <!-- Lightning Icon -->
         </div>
     </div>
+   <header class="welcome-header">
+       <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+       <p class="welcome-header__text">If you have a Kokao Account, log in with your email or phone numeber.
+   </header>
+   <form id="login-form">
+       <input type="text" placeholder="Emali or phone number"/>
+       <input type="password" placeholder="Password"/>
+       <input type="submit" value="Log in"/>     
+       <a href="#">Find Kokoa Account or Password</a>
+   </form>
+
+
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
