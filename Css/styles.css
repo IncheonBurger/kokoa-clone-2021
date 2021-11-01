@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Festive&family=Open+Sans:wght@400;600&display=swap");
 @import "reset.css";
-@import "status-bar.css";
 @import "variable.css";
+
+/* Components */
+@import "components/nav-bar.css";
+@import "components/status-bar.css";
+
+/* Screens */
+@import "screens/login.css";
 
 body {
   font-family: "Festive", cursive;
   font-family: "Open Sans", sans-serif;
+  height: 1000vh;
 }
 
 .welcome-header {
@@ -35,8 +42,12 @@ body {
   border: none;
   padding: 15px 0px;
   font-size: 18px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
   margin-bottom: 25px;
+}
+/* if와 비슷하다 not이 아닌경우만 발동 */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   transition: border-color 0.3s ease-in-out;
 }
 #login-form input::placeholder {
@@ -45,4 +56,18 @@ body {
 /* 마우스를 올릴경우 색이변경 */
 #login-form input:focus {
   border-color: var(--yello);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yello);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+/* inherit 상속을 의미한다. */
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
 }
